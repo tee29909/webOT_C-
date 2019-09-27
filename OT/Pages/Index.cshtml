@@ -1,0 +1,198 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">ขอทำงานOT</a>
+            </li>
+
+        </ol>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <div class="form-group">
+                    <div class="form-check">
+                        <input onclick="selectType1()" class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck">
+                            จันทร์-ศุกร์
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                <div class="form-group">
+                    <div class="form-check">
+                        <input onclick="selectType2()" class="form-check-input" type="checkbox" id="gridCheck2">
+                        <label class="form-check-label" for="gridCheck">
+                            เสา
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-4">
+                <div class="form-group">
+                    <div class="form-check">
+                        <input onclick="selectType3()" class="form-check-input" type="checkbox" id="gridCheck3">
+                        <label class="form-check-label" for="gridCheck">
+                            อาทิตย์
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="M1" style="display:none">
+
+
+            <div class="row">
+
+                <div class="col-sm-5 col-md-6">
+                    <label for="inputState">อาหาร</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>อาหารชุด A</option>
+                        <option>อาหารชุด B</option>
+                        <option>ไม่ต้องการ</option>
+                    </select>
+                </div>
+                <div class="col-sm-5 col-md-6">
+                    <label for="inputState">รถโดยสาร</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>กรุงเทพ</option>
+                        <option>บางแสน</option>
+                        <option>ศรีราชา</option>
+                        <option>พัทยา</option>
+                        <option>เฉลิมไทย</option>
+                        <option>พนัสนิคม</option>
+                        <option>ไม่ต้องการ</option>
+                    </select>
+                </div>
+
+
+                <!-- <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div> -->
+
+
+
+
+
+
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <br>
+                    <button type="submit" class="btn btn-primary">ยืนยันการลงทะเบียน</button>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div id="M2" style="display:none">
+
+
+
+            <div class="form-row">
+
+                <div class="col-sm-5 col-md-6">
+                    <label for="inputState">อาหาร</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>อาหารชุด A</option>
+                        <option>อาหารชุด B</option>
+                        <option>ไม่ต้องการ</option>
+                    </select>
+                </div>
+                <div class="col-sm-5 col-md-6">
+                    <label for="inputState">รถโดยสารไป</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>กรุงเทพ</option>
+                        <option>บางแสน</option>
+                        <option>ศรีราชา</option>
+                        <option>พัทยา</option>
+                        <option>เฉลิมไทย</option>
+                        <option>พนัสนิคม</option>
+                        <option>ไม่ต้องการ</option>
+                    </select>
+                </div>
+                <div class="col-sm-5 col-md-6">
+                    <label for="inputState">รถโดยสารกลับ</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>กรุงเทพ</option>
+                        <option>บางแสน</option>
+                        <option>ศรีราชา</option>
+                        <option>พัทยา</option>
+                        <option>เฉลิมไทย</option>
+                        <option>พนัสนิคม</option>
+                        <option>ไม่ต้องการ</option>
+                    </select>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+
+                    <div class="form-check">
+                        <input onclick="selectH1()" class="form-check-input" type="checkbox" id="h1">
+                        <label class="form-check-label" for="gridCheck">
+                            8 ชัวโมง
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-4">
+
+                    <div class="form-check">
+                        <input onclick="selectH2()" class="form-check-input" type="checkbox" id="h2">
+                        <label class="form-check-label" for="gridCheck">
+                            11 ชัวโมง
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <br>
+                    <button type="submit" class="btn btn-primary">ยืนยันการลงทะเบียน</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Icon Cards-->
+        <!-- Area Chart Example-->
+        <!-- DataTables Example -->
+
+
+    </div>
